@@ -1,4 +1,4 @@
-const palindromes = require('./palindromes')
+const palindromes = require('./palindromes-solution');
 
 describe('palindromes', () => {
   test('works with single words', () => {
@@ -14,12 +14,14 @@ describe('palindromes', () => {
     expect(palindromes('A car, a man, a maraca.')).toBe(true);
   });
   test('works with multiple words', () => {
-    expect(palindromes('Animal loots foliated detail of stool lamina.')).toBe(true);
+    expect(palindromes('Animal loots foliated detail of stool lamina.')).toBe(
+      true
+    );
   });
-  test('doesn\'t just always return true', () => {
-    expect(palindromes('ZZZZ car, a man, a maracaz.')).toBe(false);
+  test("doesn't just always return true", () => {
+    expect(palindromes('ZZZZ car, a man, a maraca.')).toBe(false);
   });
-  test.skip('works with numbers in a string', () => {
+  test('works with numbers in a string', () => {
     expect(palindromes('rac3e3car')).toBe(true);
   });
 });
